@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  hub.web:
+    image: hub.web
+    build:
+      context: .
+      dockerfile: HUB.Web\Dockerfile
