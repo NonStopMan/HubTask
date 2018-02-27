@@ -24306,7 +24306,7 @@
 	            return [].concat(_toConsumableArray(state), _toConsumableArray(action.payload.data));
 	        case _index.READ_POST:
 	            var postIndexToRemove = state.findIndex(function (element) {
-	                return element.postId = action.payload;
+	                return element.postId === action.payload;
 	            });
 	            return [].concat(_toConsumableArray(state.slice(0, postIndexToRemove)), _toConsumableArray(state.slice(postIndexToRemove + 1, state.length)));
 	    }

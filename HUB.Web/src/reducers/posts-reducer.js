@@ -7,7 +7,7 @@ export default function (state = [], action) {
             return [...state, ...action.payload.data];
         case READ_POST:
             var postIndexToRemove = state.findIndex((element) => {
-                return element.postId = action.payload;
+                return element.postId === action.payload;
             })
             return [...state.slice(0, postIndexToRemove), ...state.slice(postIndexToRemove + 1, state.length)];
     }
